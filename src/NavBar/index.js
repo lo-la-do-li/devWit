@@ -11,8 +11,6 @@ function NavBar() {
     setValue(tabValue);
   };
 
-
-
   return (
     <nav 
       className="nav-bar" 
