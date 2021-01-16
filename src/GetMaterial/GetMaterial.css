@@ -1,0 +1,11 @@
+.get-material {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.btn-bar {
+  display: flex;
+  justify-content: space-around;
+}

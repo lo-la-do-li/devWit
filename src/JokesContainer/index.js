@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import JokeCard from "../JokeCard";
 import "./JokesContainer.css";
-import mockData from "../mockData.js";
+// import mockData from "../mockData.js";
 
-const JokesContainer = () => {
+const JokesContainer = ({ jokes }) => {
   const removeJoke = (id) => {
-    console.log(id);
+    console.log("Get that joke outta here");
   };
 
-  const jokeCards = mockData.mySet.map((joke) => {
+  const jokeCards = jokes.map((joke) => {
     return (
       <JokeCard
         id={joke.id}
