@@ -1,4 +1,10 @@
-const mockJoke = {};
+const mockJoke = {
+    id: 24,
+    type: "programming",
+    setup: "A SQL query walks into a bar, walks up to two tables and asks...",
+    punchline: "'Can I join you?'",
+};
+
 const mockJokes = [{
         id: 26,
         type: "programming",
