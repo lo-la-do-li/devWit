@@ -1,22 +1,30 @@
 import React from "react";
 import "./JokeCard.css";
 
-const JokeCard = ({ id, type, setup, punchline, removeJoke }) => {
+const JokeCard = ({
+  joke,
+  id,
+  type,
+  setup,
+  punchline,
+  addJoke,
+  removeJoke,
+}) => {
   return (
-    <div className="joke-card">
+    <div id={id} key={id} className="joke-card">
       <p>
-        <b>Setup:</b> {setup}
+        <b>Setup:</b>
+        {setup}
       </p>
       <p>
-        <b>Punchline:</b> {punchline}
+        <b>Punchline:</b>
+        {punchline}
       </p>
       <div className="button-bar">
-        <button className="scrap-it-btn" onClick={removeJoke(id)}>
-          {" "}
+        <button className="scrap-it-btn" onClick={() => removeJoke(joke)}>
           🗑️
         </button>
-        <button className="scrap-it-btn" onClick={removeJoke(id)}>
-          {" "}
+        <button className="scrap-it-btn" onClick={() => addJoke(joke)}>
           ➕
         </button>
       </div>
