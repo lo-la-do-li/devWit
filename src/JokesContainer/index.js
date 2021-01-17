@@ -3,11 +3,7 @@ import JokeCard from "../JokeCard";
 import "./JokesContainer.css";
 // import mockData from "../mockData.js";
 
-const JokesContainer = ({ jokes }) => {
-  const removeJoke = (id) => {
-    console.log("Get that joke outta here");
-  };
-
+const JokesContainer = ({ jokes, removeJoke }) => {
   const jokeCards = jokes.map((joke) => {
     return (
       <JokeCard

@@ -5,19 +5,27 @@ import "./GetMaterial.css";
 import mockData from "../mockData";
 
 function GetMaterial() {
-  const [randomJoke, setRandomJoke] = useState(null);
+  const [randomJoke, setRandomJoke] = useState([]);
   const [jokes, setJokes] = useState([]);
+  const [faveJokes, setFavJokes] = useState([]);
 
   const getRandomJoke = () => {
     const oneJoke = mockData.joke;
     console.log(oneJoke);
-    setRandomJoke(oneJoke);
+    setJokes([]);
+    randomJoke.push(oneJoke);
+    // setRandomJoke(oneJoke);
   };
 
   const getTenJokes = () => {
     const tenJokes = mockData.jokes;
     console.log(tenJokes);
+    setRandomJoke([]);
     setJokes(tenJokes);
+  };
+
+  const removeJoke = () => {
+    console.log("works");
   };
 
   return (
@@ -27,7 +35,7 @@ function GetMaterial() {
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>
       </div>
-      {randomJoke && <JokeCard randomJoke={randomJoke} />}
+      {randomJoke && <JokesContainer jokes={randomJoke} />}
       {jokes && <JokesContainer jokes={jokes} />}
     </section>
   );

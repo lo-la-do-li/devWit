@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../NavBar";
 import Home from "../Home";
 import GetMaterial from "../GetMaterial";
@@ -6,7 +6,7 @@ import MySet from "../MySet";
 import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <section className="App">
       <NavBar />
@@ -18,6 +18,6 @@ function App() {
       </Switch>
     </section>
   );
-}
+};
 
 export default App;
