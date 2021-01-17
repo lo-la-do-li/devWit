@@ -4,6 +4,7 @@ import JokesContainer from "../JokesContainer";
 import "./GetMaterial.css";
 import mockData from "../mockData";
 import useGlobal from "../store";
+import { fetchRandomJoke, fetchTenJokes } from "../apiCalls";
 
 const GetMaterial = () => {
   const [randomJoke, setRandomJoke] = useState([]);
@@ -12,12 +13,13 @@ const GetMaterial = () => {
   const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
   const getRandomJoke = () => {
-    const oneJoke = mockData.joke;
-    console.log(oneJoke);
+    fetchRandomJoke().then((jokeData) => setRandomJoke(jokeData));
+    // const oneJoke = mockData.joke;
+    console.log(randomJoke);
     setJokes([]);
     // globalActions.addToMySet(oneJoke);
 
-    randomJoke.push(oneJoke);
+    // randomJoke.push(oneJoke);
     // console.log(globalState);
   };
 
@@ -28,13 +30,9 @@ const GetMaterial = () => {
     setJokes(tenJokes);
   };
 
-  // const removeJoke = () => {
-  //   console.log("works");
-  // };
   const addJoke = (joke) => {
-    console.log(globalState);
-    console.log(joke);
     globalActions.addToMySet(joke);
+    console.log("globalState:", globalState);
   };
 
   return (

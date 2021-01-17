@@ -1,6 +1,5 @@
 import React from "react";
 import "./JokeCard.css";
-import useGlobal from "../store";
 
 const JokeCard = ({
   joke,
