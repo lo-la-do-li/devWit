@@ -25,6 +25,7 @@ describe("Home", () => {
     const descriptionP4 = screen.getByText(
       /devwit allows you to generate random programming\-related jokes and add them to your "set" so that you can impressive your colleagues with your hilarious comedy \./i
     );
+
     expect(welcomeMsg).toBeInTheDocument();
     expect(descriptionP1).toBeInTheDocument();
     expect(descriptionP2).toBeInTheDocument();
