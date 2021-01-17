@@ -5,14 +5,13 @@ const JokeCard = ({
   joke,
   id,
   type,
-  key,
   setup,
   punchline,
   addJoke,
   removeJoke,
 }) => {
   return (
-    <div id={id} key={key} className="joke-card">
+    <div id={id} key={id} className="joke-card">
       <p>
         <b>Setup:</b>
         {setup}
