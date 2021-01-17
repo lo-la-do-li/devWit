@@ -1,5 +1,5 @@
 import React from "react";
-import JokeCard from "./JokeCard";
+import JokeCard from "./index.js";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router";
@@ -23,9 +23,17 @@ describe("JokeCard", () => {
         />
       </MemoryRouter>
     );
-    expect(name).toBeInTheDocument();
-    expect(date).toBeInTheDocument();
-    expect(time).toBeInTheDocument();
-    expect(number).toBeInTheDocument();
+
+    const setup = screen.getByText(
+      "A SQL query walks into a bar, walks up to two tables and asks..."
+    );
+    const punchline = screen.getByText("'Can I join you?'");
+    const deleteBtn = screen.getByRole("button", { name: /🗑️/i });
+    const addButton = screen.getByRole("button", { name: /➕/i });
+
+    expect(addButton).toBeInTheDocument();
+    expect(setup).toBeInTheDocument();
+    expect(punchline).toBeInTheDocument();
+    expect(deleteBtn).toBeInTheDocument();
   });
 });
