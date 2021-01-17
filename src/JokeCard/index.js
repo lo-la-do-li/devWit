@@ -20,11 +20,19 @@ const JokeCard = ({
         <b>Punchline:</b>
         {punchline}
       </p>
-      <div className="button-bar">
-        <button className="scrap-it-btn" onClick={() => removeJoke(joke)}>
+      <div aria-labelledby="joke-card-buttons" className="button-bar">
+        <button
+          aria-labelledby="remove-joke-button"
+          className="joke-card-btn"
+          onClick={() => removeJoke(joke)}
+        >
           🗑️
         </button>
-        <button className="scrap-it-btn" onClick={() => addJoke(joke)}>
+        <button
+          aria-labelledby="add-joke-button"
+          className="joke-card-btn"
+          onClick={() => addJoke(joke)}
+        >
           ➕
         </button>
       </div>
