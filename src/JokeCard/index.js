@@ -1,9 +1,19 @@
 import React from "react";
 import "./JokeCard.css";
+import useGlobal from "../store";
 
-const JokeCard = ({ id, type, setup, punchline, removeJoke, addJoke }) => {
+const JokeCard = ({
+  joke,
+  id,
+  type,
+  key,
+  setup,
+  punchline,
+  addJoke,
+  removeJoke,
+}) => {
   return (
-    <div className="joke-card">
+    <div id={id} key={key} className="joke-card">
       <p>
         <b>Setup:</b>
         {setup}
@@ -13,10 +23,10 @@ const JokeCard = ({ id, type, setup, punchline, removeJoke, addJoke }) => {
         {punchline}
       </p>
       <div className="button-bar">
-        <button className="scrap-it-btn" value={id} onClick={removeJoke}>
+        <button className="scrap-it-btn" onClick={() => removeJoke(joke)}>
           🗑️
         </button>
-        <button className="scrap-it-btn" value={id} onClick={removeJoke}>
+        <button className="scrap-it-btn" onClick={() => addJoke(joke)}>
           ➕
         </button>
       </div>

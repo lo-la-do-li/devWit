@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import JokesContainer from "../JokesContainer";
-import JokeCard from "../JokeCard";
+// import JokeCard from "../JokeCard";
 import "./GetMaterial.css";
 import mockData from "../mockData";
+import useGlobal from "../store";
 
-function GetMaterial() {
+const GetMaterial = () => {
   const [randomJoke, setRandomJoke] = useState([]);
   const [jokes, setJokes] = useState([]);
-  const [faveJokes, setFavJokes] = useState([]);
+  const [globalState, globalActions] = useGlobal();
+  const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
   const getRandomJoke = () => {
     const oneJoke = mockData.joke;
     console.log(oneJoke);
     setJokes([]);
+    // globalActions.addToMySet(oneJoke);
+
     randomJoke.push(oneJoke);
-    // setRandomJoke(oneJoke);
+    // console.log(globalState);
   };
 
   const getTenJokes = () => {
@@ -24,8 +28,13 @@ function GetMaterial() {
     setJokes(tenJokes);
   };
 
-  const removeJoke = () => {
-    console.log("works");
+  // const removeJoke = () => {
+  //   console.log("works");
+  // };
+  const addJoke = (joke) => {
+    console.log(globalState);
+    console.log(joke);
+    globalActions.addToMySet(joke);
   };
 
   return (
@@ -35,10 +44,22 @@ function GetMaterial() {
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>
       </div>
-      {randomJoke && <JokesContainer jokes={randomJoke} />}
-      {jokes && <JokesContainer jokes={jokes} />}
+      {randomJoke && (
+        <JokesContainer
+          jokes={randomJoke}
+          addJoke={addJoke}
+          // removeJoke={removeJoke}
+        />
+      )}
+      {jokes && (
+        <JokesContainer
+          jokes={jokes}
+          addJoke={addJoke}
+          // removeJoke={removeJoke}
+        />
+      )}
     </section>
   );
-}
+};
 
 export default GetMaterial;
