@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import JokesContainer from "../JokesContainer";
-// import JokeCard from "../JokeCard";
 import "./GetMaterial.css";
-import mockData from "../mockData";
+// import mockData from "../mockData";
 import useGlobal from "../store";
 import { fetchRandomJoke, fetchTenJokes } from "../apiCalls";
 
@@ -12,27 +11,21 @@ const GetMaterial = () => {
   const [globalState, globalActions] = useGlobal();
   const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
-  const getRandomJoke = () => {
-    fetchRandomJoke().then((jokeData) => setRandomJoke(jokeData));
-    // const oneJoke = mockData.joke;
+  const getRandomJoke = async () => {
+    await fetchRandomJoke().then((jokeData) => setRandomJoke(jokeData));
     console.log(randomJoke);
     setJokes([]);
-    // globalActions.addToMySet(oneJoke);
-
-    // randomJoke.push(oneJoke);
-    // console.log(globalState);
   };
 
-  const getTenJokes = () => {
-    const tenJokes = mockData.jokes;
-    console.log(tenJokes);
+  const getTenJokes = async () => {
+    await fetchTenJokes().then((jokesData) => setJokes(jokesData));
+    console.log(jokes);
+    // const tenJokes = mockData.jokes;
     setRandomJoke([]);
-    setJokes(tenJokes);
   };
 
   const addJoke = (joke) => {
     globalActions.addToMySet(joke);
-    console.log("globalState:", globalState);
   };
 
   return (
