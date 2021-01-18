@@ -6,7 +6,6 @@ import "@testing-library/jest-dom";
 import { Router, MemoryRouter } from "react-router";
 import { createMemoryHistory } from "history";
 import { addToMySet } from "../actions";
-// import { useGlobal } from "../store";
 import { fetchTenJokes } from "../apiCalls";
 import mockData from "../mockData";
 import { act } from "react-dom/test-utils";
@@ -17,7 +16,6 @@ jest.mock("../actions");
 describe("App", () => {
   beforeEach(() => {
     fetchTenJokes.mockResolvedValueOnce(mockData.jokes);
-    // addToMySet.mockResolvedValueOnce(funnyPunchLine);
 
     render(
       <MemoryRouter>
@@ -103,12 +101,14 @@ describe("App", () => {
     act(() => {
       userEvent.click(addButton);
     });
+
     expect(addToMySet).toHaveBeenCalledTimes(1);
+
     const mySetTab = screen.getByRole("button", { name: /my set/i });
     fireEvent.click(mySetTab);
 
-    const funnyJokePunchLine = await waitFor(() =>
-      screen.getByText("(hip hip array)")
+    const funnyJokePunchline = await waitFor(() =>
+      screen.queryByText("(hip hip array)")
     );
     // expect(funnyJokePunchline).toBeInTheDocument();
   });

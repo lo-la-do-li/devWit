@@ -14,6 +14,7 @@ describe("JokesContainer", () => {
     mockAddJoke = jest.fn();
     mockRemoveJoke = jest.fn();
   });
+
   it("should display 1 random joke when passed randomJoke object and addJoke props from parent node GetMaterial", () => {
     render(<JokesContainer jokes={randomJoke} addJoke={mockAddJoke} />);
 
