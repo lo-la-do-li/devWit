@@ -13,6 +13,7 @@ const JokesContainer = ({ jokes, addJoke, removeJoke }) => {
         setup={joke.setup}
         punchline={joke.punchline}
         mySet={joke.mySet}
+        isFavorite={joke.isFavorite || false}
         key={joke.id}
         addJoke={addJoke}
         removeJoke={removeJoke}

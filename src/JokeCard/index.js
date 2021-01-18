@@ -8,6 +8,7 @@ const JokeCard = ({
   type,
   setup,
   punchline,
+  isFavorite,
   addJoke,
   removeJoke,
 }) => {
@@ -22,20 +23,24 @@ const JokeCard = ({
         {punchline}
       </p>
       <div aria-label="joke-card-buttons" className="button-bar">
-        <button
-          aria-label={`remove-joke-${id}-from-set`}
-          className="joke-card-btn"
-          onClick={() => removeJoke(joke)}
-        >
-          🗑️
-        </button>
-        <button
-          aria-label={`add-joke-${id}-to-set`}
-          className="joke-card-btn"
-          onClick={() => addJoke(joke)}
-        >
-          ➕
-        </button>
+        {isFavorite && (
+          <button
+            aria-label={`remove-joke-${id}-from-set`}
+            className="joke-card-btn"
+            onClick={() => removeJoke(joke)}
+          >
+            🗑️
+          </button>
+        )}
+        {!isFavorite && (
+          <button
+            aria-label={`add-joke-${id}-to-set`}
+            className="joke-card-btn"
+            onClick={() => addJoke(joke)}
+          >
+            ➕
+          </button>
+        )}
       </div>
     </div>
   );

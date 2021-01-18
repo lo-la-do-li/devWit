@@ -21,6 +21,7 @@ const GetMaterial = () => {
   };
 
   const addJoke = (joke) => {
+    joke.isFavorite = true;
     globalActions.addToMySet(joke);
   };
 
@@ -31,20 +32,8 @@ const GetMaterial = () => {
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>
       </div>
-      {randomJoke && (
-        <JokesContainer
-          jokes={randomJoke}
-          addJoke={addJoke}
-          // removeJoke={removeJoke}
-        />
-      )}
-      {jokes && (
-        <JokesContainer
-          jokes={jokes}
-          addJoke={addJoke}
-          // removeJoke={removeJoke}
-        />
-      )}
+      {randomJoke && <JokesContainer jokes={randomJoke} addJoke={addJoke} />}
+      {jokes && <JokesContainer jokes={jokes} addJoke={addJoke} />}
     </section>
   );
 };
