@@ -52,6 +52,7 @@ JokeCard.propTypes = {
   type: PropTypes.string,
   setup: PropTypes.string,
   punchline: PropTypes.string,
+  isFavorite: PropTypes.bool,
   addJoke: PropTypes.func,
   removeJoke: PropTypes.func,
 };

@@ -4,8 +4,9 @@ import "./MySet.css";
 import useGlobal from "../store";
 
 const MySet = () => {
-  const [globalActions] = useGlobal();
-  const [myJokes] = useGlobal((state) => state.myJokes);
+  const [globalState, globalActions] = useGlobal();
+  const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
+
   const removeJoke = (joke) => {
     globalActions.deleteFromMySet(joke);
   };
