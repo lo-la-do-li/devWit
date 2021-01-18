@@ -28,8 +28,12 @@ describe("JokeCard", () => {
       "A SQL query walks into a bar, walks up to two tables and asks..."
     );
     const punchline = screen.getByText("'Can I join you?'");
-    const deleteBtn = screen.getByRole("button", { name: /🗑️/i });
-    const addButton = screen.getByRole("button", { name: /➕/i });
+    const deleteBtn = screen.getByRole("button", {
+      name: /remove\-joke\-24\-from\-set/i,
+    });
+    const addButton = screen.getByRole("button", {
+      name: /add\-joke\-24\-to\-set/i,
+    });
 
     expect(addButton).toBeInTheDocument();
     expect(setup).toBeInTheDocument();

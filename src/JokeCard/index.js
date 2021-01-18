@@ -20,16 +20,16 @@ const JokeCard = ({
         <b>Punchline:</b>
         {punchline}
       </p>
-      <div aria-labelledby="joke-card-buttons" className="button-bar">
+      <div aria-label="joke-card-buttons" className="button-bar">
         <button
-          aria-labelledby="remove-joke-button"
+          aria-label={`remove-joke-${id}-from-set`}
           className="joke-card-btn"
           onClick={() => removeJoke(joke)}
         >
           🗑️
         </button>
         <button
-          aria-labelledby="add-joke-button"
+          aria-label={`add-joke-${id}-to-set`}
           className="joke-card-btn"
           onClick={() => addJoke(joke)}
         >
