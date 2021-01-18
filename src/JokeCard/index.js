@@ -1,5 +1,6 @@
 import React from "react";
 import "./JokeCard.css";
+import PropTypes from "prop-types";
 
 const JokeCard = ({
   joke,
@@ -20,11 +21,19 @@ const JokeCard = ({
         <b>Punchline:</b>
         {punchline}
       </p>
-      <div className="button-bar">
-        <button className="scrap-it-btn" onClick={() => removeJoke(joke)}>
+      <div aria-label="joke-card-buttons" className="button-bar">
+        <button
+          aria-label={`remove-joke-${id}-from-set`}
+          className="joke-card-btn"
+          onClick={() => removeJoke(joke)}
+        >
           🗑️
         </button>
-        <button className="scrap-it-btn" onClick={() => addJoke(joke)}>
+        <button
+          aria-label={`add-joke-${id}-to-set`}
+          className="joke-card-btn"
+          onClick={() => addJoke(joke)}
+        >
           ➕
         </button>
       </div>
@@ -32,4 +41,13 @@ const JokeCard = ({
   );
 };
 
+JokeCard.propTypes = {
+  joke: PropTypes.object,
+  id: PropTypes.number,
+  type: PropTypes.string,
+  setup: PropTypes.string,
+  punchline: PropTypes.string,
+  addJoke: PropTypes.func,
+  removeJoke: PropTypes.func,
+};
 export default JokeCard;

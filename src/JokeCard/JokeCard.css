@@ -20,13 +20,13 @@ p {
   justify-content: space-between;
 }
 
-.scrap-it-btn {
+.joke-card-btn {
   align-self: center;
   margin: 10px;
   width: 20%;
-  height: 10px;
-  border: none;
+  height: 35px;
+  border: 1.5px solid black;
+  background-color: rgb(243, 144, 144);
   border-radius: 5px;
   font-size: 24px;
-  background: none;
 }
