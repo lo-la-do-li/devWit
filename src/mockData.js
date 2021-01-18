@@ -94,6 +94,22 @@ const mockData = {
         "A full one, in case he gets thirsty, and an empty one, in case he doesn’t.",
     },
   ],
+  myNewSet: [
+    {
+      id: 24,
+      type: "programming",
+      setup: "A SQL query walks into a bar, walks up to two tables and asks...",
+      punchline: "'Can I join you?'",
+    },
+    {
+      id: 379,
+      type: "programming",
+      setup:
+        "A programmer puts two glasses on his bedside table before going to sleep.",
+      punchline:
+        "A full one, in case he gets thirsty, and an empty one, in case he doesn’t.",
+    },
+  ],
 };
 
 export default mockData;

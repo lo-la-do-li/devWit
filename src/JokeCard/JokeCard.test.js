@@ -1,14 +1,17 @@
 import React from "react";
 import JokeCard from "./index.js";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router";
 import mockData from "../mockData.js";
 
+let joke, mockRemoveJoke, mockAddJoke, setup, punchline, deleteBtn, addButton;
+
 describe("JokeCard", () => {
-  it("should render a joke card", () => {
-    const joke = mockData.joke;
-    const { mockAddJoke, mockRemoveJoke } = jest.fn();
+  beforeEach(() => {
+    joke = mockData.joke;
+    mockRemoveJoke = jest.fn();
+    mockAddJoke = jest.fn();
 
     render(
       <MemoryRouter>
@@ -23,21 +26,31 @@ describe("JokeCard", () => {
         />
       </MemoryRouter>
     );
-
-    const setup = screen.getByText(
+    setup = screen.getByText(
       "A SQL query walks into a bar, walks up to two tables and asks..."
     );
-    const punchline = screen.getByText("'Can I join you?'");
-    const deleteBtn = screen.getByRole("button", {
+    punchline = screen.getByText("'Can I join you?'");
+    deleteBtn = screen.getByRole("button", {
       name: /remove\-joke\-24\-from\-set/i,
     });
-    const addButton = screen.getByRole("button", {
+    addButton = screen.getByRole("button", {
       name: /add\-joke\-24\-to\-set/i,
     });
-
+  });
+  it("should render a joke card", () => {
     expect(addButton).toBeInTheDocument();
     expect(setup).toBeInTheDocument();
     expect(punchline).toBeInTheDocument();
     expect(deleteBtn).toBeInTheDocument();
+  });
+  it("passes the correct joke object to the removeJoke function on button click", () => {
+    fireEvent.click(deleteBtn);
+
+    expect(mockRemoveJoke).toHaveBeenCalledWith(joke);
+  });
+  it("passes the correct joke object to the addJoke function on button click", () => {
+    fireEvent.click(addButton);
+
+    expect(mockAddJoke).toHaveBeenCalledWith(joke);
   });
 });

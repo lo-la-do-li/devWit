@@ -7,9 +7,9 @@ const MySet = () => {
   const [globalState, globalActions] = useGlobal();
   const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
-  // useEffect(() => {
-  //   console.log("I rerendered");
-  // }, [myJokes]);
+  useEffect(() => {
+    console.log("I rerendered");
+  }, [myJokes]);
 
   const removeJoke = (joke) => {
     globalActions.deleteFromMySet(joke);

@@ -6,15 +6,14 @@ import mockData from "../mockData";
 
 let randomTenJokes, randomJoke, mockAddJoke, mockRemoveJoke, mySetJokes;
 
-beforeEach(() => {
-  randomJoke = [mockData.joke];
-  randomTenJokes = mockData.jokes;
-  mySetJokes = mockData.mySet;
-  mockAddJoke = jest.fn();
-  mockRemoveJoke = jest.fn();
-});
-
 describe("JokesContainer", () => {
+  beforeEach(() => {
+    randomJoke = [mockData.joke];
+    randomTenJokes = mockData.jokes;
+    mySetJokes = mockData.mySet;
+    mockAddJoke = jest.fn();
+    mockRemoveJoke = jest.fn();
+  });
   it("should display 1 random joke when passed randomJoke object and addJoke props from parent node GetMaterial", () => {
     render(<JokesContainer jokes={randomJoke} addJoke={mockAddJoke} />);
 
