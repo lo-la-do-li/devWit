@@ -16,7 +16,6 @@ jest.mock("../actions");
 describe("App", () => {
   beforeEach(() => {
     fetchTenJokes.mockResolvedValueOnce(mockData.jokes);
-
     render(
       <MemoryRouter>
         <App />

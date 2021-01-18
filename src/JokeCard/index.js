@@ -1,5 +1,6 @@
 import React from "react";
 import "./JokeCard.css";
+import PropTypes from "prop-types";
 
 const JokeCard = ({
   joke,
@@ -40,4 +41,13 @@ const JokeCard = ({
   );
 };
 
+JokeCard.propTypes = {
+  joke: PropTypes.object,
+  id: PropTypes.number,
+  type: PropTypes.string,
+  setup: PropTypes.string,
+  punchline: PropTypes.string,
+  addJoke: PropTypes.func,
+  removeJoke: PropTypes.func,
+};
 export default JokeCard;
