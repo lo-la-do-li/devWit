@@ -1,18 +1,25 @@
 import React from "react";
 import JokeCard from "./index.js";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router";
 import mockData from "../mockData.js";
+import { act } from "react-dom/test-utils";
+import userEvent from "@testing-library/user-event";
 
-let joke, mockRemoveJoke, mockAddJoke, setup, punchline, deleteBtn, addButton;
+let joke,
+  mockRemoveJoke,
+  mockAddJoke,
+  setup,
+  punchline,
+  removeButton,
+  addButton;
 
 describe("JokeCard", () => {
-  beforeEach(() => {
+  it("should render a joke card", () => {
     joke = mockData.joke;
     mockRemoveJoke = jest.fn();
     mockAddJoke = jest.fn();
-
     render(
       <MemoryRouter>
         <JokeCard
@@ -21,6 +28,7 @@ describe("JokeCard", () => {
           type={joke.type}
           setup={joke.setup}
           punchline={joke.punchline}
+          isFavorite={false}
           addJoke={mockAddJoke}
           removeJoke={mockRemoveJoke}
         />
@@ -30,25 +38,63 @@ describe("JokeCard", () => {
       "A SQL query walks into a bar, walks up to two tables and asks..."
     );
     punchline = screen.getByText("'Can I join you?'");
-    deleteBtn = screen.getByRole("button", {
-      name: /remove\-joke\-24\-from\-set/i,
-    });
     addButton = screen.getByRole("button", {
       name: /add\-joke\-24\-to\-set/i,
     });
-  });
-  it("should render a joke card", () => {
-    expect(addButton).toBeInTheDocument();
+
     expect(setup).toBeInTheDocument();
     expect(punchline).toBeInTheDocument();
-    expect(deleteBtn).toBeInTheDocument();
   });
-  it("passes the correct joke object to the removeJoke function on button click", () => {
-    fireEvent.click(deleteBtn);
+
+  it("renders removeButton if isFavorite=false and passes the correct joke object to the removeJoke function on button click", async () => {
+    joke = mockData.joke;
+    mockRemoveJoke = jest.fn();
+    render(
+      <MemoryRouter>
+        <JokeCard
+          joke={joke}
+          id={joke.id}
+          type={joke.type}
+          setup={joke.setup}
+          punchline={joke.punchline}
+          isFavorite={(joke.isFavorite = true)}
+          addJoke={mockAddJoke}
+          removeJoke={mockRemoveJoke}
+        />
+      </MemoryRouter>
+    );
+    removeButton = screen.getByRole("button", {
+      name: /remove\-joke\-24\-from\-set/i,
+    });
+    expect(removeButton).toBeInTheDocument();
+
+    fireEvent.click(removeButton);
 
     expect(mockRemoveJoke).toHaveBeenCalledWith(joke);
   });
-  it("passes the correct joke object to the addJoke function on button click", () => {
+
+  it("renders addButton if joke isFavorite=true, and passes the correct joke object to the addJoke function on click", () => {
+    joke = mockData.joke;
+    mockAddJoke = jest.fn();
+    render(
+      <MemoryRouter>
+        <JokeCard
+          joke={joke}
+          id={joke.id}
+          type={joke.type}
+          setup={joke.setup}
+          punchline={joke.punchline}
+          isFavorite={false}
+          addJoke={mockAddJoke}
+          removeJoke={mockRemoveJoke}
+        />
+      </MemoryRouter>
+    );
+    addButton = screen.getByRole("button", {
+      name: /add\-joke\-24\-to\-set/i,
+    });
+    expect(addButton).toBeInTheDocument();
+
     fireEvent.click(addButton);
 
     expect(mockAddJoke).toHaveBeenCalledWith(joke);
