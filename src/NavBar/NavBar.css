@@ -1,5 +1,5 @@
 nav {
-  background-color: black;
+  background-color:#161313;
 }
 .nav-bar {
   display: flex;
@@ -9,6 +9,7 @@ nav {
   font-weight: bolder;
   font-size: 16px;
   border-radius: 6px;
+  margin-bottom: 50px;
 }
 
 .nav-button {

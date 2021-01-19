@@ -17,16 +17,16 @@
   width: 30%;
   height: 65px;
   font-size: 18px;
-  background-color:#5bcdd5;
+  margin: 20px;
+  background-color:#52dadc;
   outline: none;
   box-shadow: none;
-  color: white;
+  color: #161313;
   font-weight: bolder;
 }
 
-
 .header-get-material {
-  margin: 40px;
+  margin: 10px 0 50px 0;
   font-size: 30px;
-  color: #6c6868;
+  color: #524d4d;
 }

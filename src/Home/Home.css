@@ -2,12 +2,12 @@
   display: block;
   flex-direction: column;
   justify-content: center;
-  background-color: #cd8e8e;
+  background-color: #b35e5e;
   width: 90%;
   height: 90%;
   border-radius: 10px;
   padding: 2vw;
-  margin: 5vh;
+  margin: 6vh;
 }
 .welcome-msg {
   justify-content: center;
