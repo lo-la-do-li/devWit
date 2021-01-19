@@ -23,7 +23,7 @@ describe("Home", () => {
     const descriptionP3 = screen.getByText("You've come to the right place.");
 
     const descriptionP4 = screen.getByText(
-      /devwit allows you to generate random programming\-related jokes and add them to your "set" so that you can impressive your colleagues with your hilarious comedy \./i
+      /devwit allows you to generate random programming\-related jokes and add them to your "set" so that you can impress your colleagues with your hilarious comedy \./i
     );
 
     expect(welcomeMsg).toBeInTheDocument();

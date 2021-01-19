@@ -20,8 +20,8 @@ function Home() {
 
         <p className="four">
           DevWit allows you to generate random programming-related jokes and add
-          them to your "set" so that you can impressive your colleagues with
-          your hilarious comedy <i>bits</i>.
+          them to your "set" so that you can impress your colleagues with your
+          hilarious comedy <i>bits</i>.
         </p>
       </div>
     </div>

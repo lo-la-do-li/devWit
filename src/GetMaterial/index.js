@@ -24,8 +24,8 @@ const GetMaterial = () => {
     globalActions.addToMySet(joke);
   };
 
-  const disableRemoveBtn = (joke) => {
-    return joke;
+  const disableRemoveBtn = () => {
+    return;
   };
 
   return (
