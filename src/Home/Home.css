@@ -2,13 +2,7 @@
   display: block;
   flex-direction: column;
   justify-content: center;
-  /* flex-direction: column;
-  align-self: center; */
-  /* background-image: url(../assets/monitor.png); */
-  /* background-repeat: no-repeat; */
-  background-color: black;
-  /* background-size: cover; */
-  /* shape-image-threshold: inherit; */
+  background-color: #6c6868;
   width: 90%;
   height: 90%;
   border-radius: 10px;
@@ -16,8 +10,6 @@
   margin: 5vh;
 }
 .welcome-msg {
-  /* display: flex;
-  flex-direction: column; */
   justify-content: center;
   align-items: center;
   font-size: xx-large;
@@ -32,7 +24,6 @@
 
 .one {
   font-size: x-large;
-  /* margin-inline-start: 10px; */
   margin-bottom: 10px;
 }
 
@@ -49,5 +40,4 @@
 .four {
   font-size: medium;
   line-height: 25px;
-  /* margin-bottom: 30px; */
 }

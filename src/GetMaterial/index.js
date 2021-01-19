@@ -24,17 +24,31 @@ const GetMaterial = () => {
     globalActions.addToMySet(joke);
   };
 
+  const disableRemoveBtn = (joke) => {
+    return joke;
+  };
+
   return (
     <section className="get-material">
-      <h3 className="header-get-material">
-        <i>Need Some New Material?</i>
-      </h3>
+      <h3 className="header-get-material">Need Some New Material?</h3>
       <div className="btn-bar">
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>
       </div>
-      {randomJoke && <JokesContainer jokes={randomJoke} addJoke={addJoke} />}
-      {jokes && <JokesContainer jokes={jokes} addJoke={addJoke} />}
+      {randomJoke && (
+        <JokesContainer
+          jokes={randomJoke}
+          addJoke={addJoke}
+          removeJoke={disableRemoveBtn}
+        />
+      )}
+      {jokes && (
+        <JokesContainer
+          jokes={jokes}
+          addJoke={addJoke}
+          removeJoke={disableRemoveBtn}
+        />
+      )}
     </section>
   );
 };
