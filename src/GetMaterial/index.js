@@ -25,6 +25,7 @@ const GetMaterial = () => {
   };
 
   const disableRemoveBtn = () => {
+    alert("Check out this joke in your set before you scrap it!");
     return;
   };
 
