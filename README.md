@@ -94,6 +94,3 @@ With more time, I would like to enhance the UI/UX by:
  width="150" height="auto" />
 
 [Lola Dolinsky](https://github.com/lo-la-do-li)
-
-<img src="https://avatars3.githubusercontent.com/u/12281987?s=400&u=74569b5cafa00cad0a6ac3418de2ff1b29aba11f&v=4" alt="Chadrick Dickerson"
- width="150" height="auto" />
