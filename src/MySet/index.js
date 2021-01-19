@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import JokesContainer from "../JokesContainer";
 import "./MySet.css";
 import useGlobal from "../store";

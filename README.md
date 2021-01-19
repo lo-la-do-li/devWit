@@ -18,13 +18,7 @@ This app was created with a specific audience in mind: Software Developers with 
 
 ## DevWit in Action:
 
-![]()
-
-![]()
-
-![]()
-
-![DevWit-gif]()
+![DevWit-gif](https://media.giphy.com/media/LR7SOnCgQQ5seUjpJ0/giphy.gif)
 
 ## Goals
 
@@ -72,6 +66,7 @@ This app was created with a specific audience in mind: Software Developers with 
 - Managing state via use-global-hook
 - Making API calls to a remote joke server
 - Passing, manipulating, and displaying data on the UI
+- 100% Lighthouse Accessibility score
 
 ## Roadmap
 
