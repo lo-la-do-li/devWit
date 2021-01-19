@@ -8,7 +8,6 @@ const GetMaterial = () => {
   const [randomJoke, setRandomJoke] = useState([]);
   const [jokes, setJokes] = useState([]);
   const [globalState, globalActions] = useGlobal();
-  // const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
   const getRandomJoke = async () => {
     await fetchRandomJoke().then((jokeData) => setRandomJoke(jokeData));
@@ -27,7 +26,9 @@ const GetMaterial = () => {
 
   return (
     <section className="get-material">
-      <h3>Need Some New Material?</h3>
+      <h3 className="header-get-material">
+        <i>Need Some New Material?</i>
+      </h3>
       <div className="btn-bar">
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>

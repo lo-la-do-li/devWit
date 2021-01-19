@@ -13,7 +13,7 @@ const MySet = () => {
 
   return (
     <section className="my-set">
-      <h2>This is My Set</h2>
+      <h2 className="header-get-material">This is My Set</h2>
       <JokesContainer jokes={myJokes} removeJoke={removeJoke} />
     </section>
   );

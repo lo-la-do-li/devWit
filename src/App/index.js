@@ -8,7 +8,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 const App = () => {
   return (
-    <section className="App">
+    <div className="App">
       <NavBar />
       <Switch>
         <Redirect exact path="/" to="/home" component={Home} />
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/get-material" component={GetMaterial} />
         <Route path="/my-set" component={MySet} />
       </Switch>
-    </section>
+    </div>
   );
 };
 

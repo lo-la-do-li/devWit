@@ -14,14 +14,14 @@ const JokeCard = ({
 }) => {
   return (
     <div id={id} key={id} className="joke-card">
-      <p>
+      <p className="joke-prop">
         <b>Setup:</b>
-        {setup}
       </p>
-      <p>
+      <p className="joke-value">{setup}</p>
+      <p className="joke-prop">
         <b>Punchline:</b>
-        {punchline}
       </p>
+      <p className="joke-value">{punchline}</p>
       <div aria-label="joke-card-buttons" className="button-bar">
         {isFavorite && (
           <button

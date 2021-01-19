@@ -1,6 +1,14 @@
 .App {
   text-align: center;
   padding: 1.5em;
+  
+}
+
+button:focus {
+  /* border-color: #C278FD; */
+  font-size: 20px;
+  outline: none;
+  box-shadow: none;
 }
 
 #blockColorblindContent {

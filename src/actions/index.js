@@ -4,12 +4,6 @@ export const addToMySet = (store, addedJoke) => {
 };
 
 export const deleteFromMySet = (store, deletedJoke) => {
-  // console.log(deletedJoke.id);
-  // const filteredJokeSet = store.state.myJokes.filter(
-  //   (joke) => joke.id !== deletedJoke.id
-  // );
-  // console.log(filteredJokeSet);
-  // store.setState({ filteredJokeSet });
   var index = store.state.myJokes.indexOf(deletedJoke);
   if (index > -1) {
     store.state.myJokes.splice(index, 1);
