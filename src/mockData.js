@@ -78,12 +78,14 @@ const mockData = {
       type: "programming",
       setup: "['hip', 'hip']",
       punchline: "(hip hip array)",
+      isFavorite: true,
     },
     {
       id: 24,
       type: "programming",
       setup: "A SQL query walks into a bar, walks up to two tables and asks...",
       punchline: "'Can I join you?'",
+      isFavorite: true,
     },
     {
       id: 379,
@@ -92,6 +94,7 @@ const mockData = {
         "A programmer puts two glasses on his bedside table before going to sleep.",
       punchline:
         "A full one, in case he gets thirsty, and an empty one, in case he doesn’t.",
+      isFavorite: true,
     },
   ],
   myNewSet: [

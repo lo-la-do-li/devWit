@@ -1,5 +1,25 @@
+nav {
+  background-color: black;
+}
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.nav-button {
+  background: none;
+  color: white;
+  border: none;
+  padding: 5px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.nav-button:focus {
+  color: #67f0fc;
 }

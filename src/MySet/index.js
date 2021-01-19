@@ -4,15 +4,16 @@ import "./MySet.css";
 import useGlobal from "../store";
 
 const MySet = () => {
-  const [globalActions] = useGlobal();
-  const [myJokes] = useGlobal((state) => state.myJokes);
+  const [globalState, globalActions] = useGlobal();
+  const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
+
   const removeJoke = (joke) => {
     globalActions.deleteFromMySet(joke);
   };
 
   return (
     <section className="my-set">
-      <h2>This is My Set</h2>
+      <h2 className="header-get-material">This is My Set</h2>
       <JokesContainer jokes={myJokes} removeJoke={removeJoke} />
     </section>
   );

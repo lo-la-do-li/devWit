@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# DevWit _solo project_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+By: [Lola Dolinsky](https://github.com/lo-la-do-li)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Goals](#goals)
+- [Technologies And Tools](#technologies-and-tools)
+- [Challenges](#challenges)
+- [Wins](#wins)
+- [Roadmap](#roadmap)
+- [Contributor](#contributor)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app was created with a specific audience in mind: Software Developers with a sense of humor that might consider moonlighting as a comedian! With this app, a user is greeted with a welcome message and description on the home page. The user can then navigate to a 'Get Some New Material' page where there are two options: One button generates one random programming joke; Another generates ten random programming jokes. The user can then choose to add a joke to their set. On clicking the 'My Set' tab, the user will see the jokes that they liked displayed. If the joke bombs, or maybe it seems less funny now... the user can remove it from their set.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## DevWit in Action:
 
-### `npm test`
+![]()
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![]()
 
-### `npm run build`
+![]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![DevWit-gif]()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Goals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Build a backend server with PostgreSQL, Express, and Knex
+- Host our unique database remotely on Heroku
+- Make successful API calls to our backend server within our Frontend UI to access and render our data
+- Build out a cleanly designed, intuitive, and accessible frontend as a piece of a potentially much larger application concept
 
-### `npm run eject`
+## Technologies And Tools
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> - React (With hooks)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> - React Testing (with Jest)
+> - use-global-hook
+> - React Router
+> - JavaScript
+> - JSX
+> - git
+> - GitHub
+> - Terminal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<details>
+  <summary>Setup</summary>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- _Click_ the **Fork** button on the top right-hand corner of this page
+- Clone the repository down and cd into the repo on your local machine by running:
+  - `git clone git@github.com:lo-la-do-li/devWit.git`
+  - cd into `devWit` locally
+- Install the library dependencies by running:
+  - `npm install`
+- To verify that it is setup correctly, run `npm start` in your terminal.
+- Go to `http://localhost:3000/` and you should see the site.
+- Enter `control + c` in your terminal to stop the server at any time.
+- Run `npm test` to view passing unit and integration tests
+- Add your changes, push up to GitHub and submit a pull request
+</details>
 
-## Learn More
+## Challenges
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Learning and implementing use-global-hook for state management of jokes displayed in My Set
+- Producing all app logic, API calls, testing suites, and styling in short window (6 days)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Wins
 
-### Code Splitting
+- Managing state via use-global-hook
+- Making API calls to a remote joke server
+- Passing, manipulating, and displaying data on the UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Roadmap
 
-### Analyzing the Bundle Size
+With more time, I would like to enhance the UI/UX by:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Adding a "crickets/bomb" or "applause" button to indicate whether the joke was successful
+- Adding a form to joke cards so that user can write notes and/or edit
+- Enhance stylings
+- Link to external Express server so that original jokes can be edited by the user and saved
 
-### Making a Progressive Web App
+## Project Managers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Leta Keane
 
-### Advanced Configuration
+#### Will Mitchell
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributor
 
-### Deployment
+<img src="https://media-exp1.licdn.com/dms/image/C4E03AQG9jZTOd0oUCQ/profile-displayphoto-shrink_800_800/0/1606070086923?e=1616025600&v=beta&t=WldtPrGc57mSEiAJkFaYGVq9Ksc0uqBmFLFR11fQUs4" alt="Lola Dolinsky"
+ width="150" height="auto" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Lola Dolinsky](https://github.com/lo-la-do-li)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://avatars3.githubusercontent.com/u/12281987?s=400&u=74569b5cafa00cad0a6ac3418de2ff1b29aba11f&v=4" alt="Chadrick Dickerson"
+ width="150" height="auto" />

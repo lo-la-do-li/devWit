@@ -8,7 +8,6 @@ const GetMaterial = () => {
   const [randomJoke, setRandomJoke] = useState([]);
   const [jokes, setJokes] = useState([]);
   const [globalState, globalActions] = useGlobal();
-  // const [myJokes, setMyJokes] = useGlobal((state) => state.myJokes);
 
   const getRandomJoke = async () => {
     await fetchRandomJoke().then((jokeData) => setRandomJoke(jokeData));
@@ -21,12 +20,17 @@ const GetMaterial = () => {
   };
 
   const addJoke = (joke) => {
+    joke.isFavorite = true;
     globalActions.addToMySet(joke);
+  };
+
+  const disableRemoveBtn = () => {
+    return;
   };
 
   return (
     <section className="get-material">
-      <h3>Need Some New Material?</h3>
+      <h3 className="header-get-material">Need Some New Material?</h3>
       <div className="btn-bar">
         <button onClick={getRandomJoke}>Get A Joke</button>
         <button onClick={getTenJokes}>Get 10 Jokes</button>
@@ -35,14 +39,14 @@ const GetMaterial = () => {
         <JokesContainer
           jokes={randomJoke}
           addJoke={addJoke}
-          // removeJoke={removeJoke}
+          removeJoke={disableRemoveBtn}
         />
       )}
       {jokes && (
         <JokesContainer
           jokes={jokes}
           addJoke={addJoke}
-          // removeJoke={removeJoke}
+          removeJoke={disableRemoveBtn}
         />
       )}
     </section>
