@@ -23,6 +23,7 @@
   box-shadow: none;
   color: #161313;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .header-get-material {

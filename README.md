@@ -1,4 +1,6 @@
-# DevWit _solo project_
+# DevWit
+
+#### _a Turing mod 3 solo project_
 
 By: [Lola Dolinsky](https://github.com/lo-la-do-li)
 
