@@ -24,10 +24,17 @@ This app was created with a specific audience in mind: Software Developers with 
 
 ## Goals
 
-- Build a backend server with PostgreSQL, Express, and Knex
-- Host our unique database remotely on Heroku
-- Make successful API calls to our backend server within our Frontend UI to access and render our data
-- Build out a cleanly designed, intuitive, and accessible frontend as a piece of a potentially much larger application concept
+- Use the technology you’ve been working with over the course of the module to demonstrate mastery of the following:
+- - React fundamentals
+- - React Router
+- - Asynchronous JavaScript
+- Integration and unit testing utilizing react-dom and Jest libraries
+- Work within constraints to deliver a unique product for an audience which helps them in some way 
+- Utilize an API build an app that displays data relevant to a specific audience
+
+Your applications should have the following core functionality:
+Display the data from the API in a way that applies directly to your audience
+Ability for users to store/manipulate the data displayed in the application, such as favoriting or adding to a list
 
 ## Technologies And Tools
 
