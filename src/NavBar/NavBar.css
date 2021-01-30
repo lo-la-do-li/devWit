@@ -24,3 +24,24 @@ nav {
 .nav-button:focus {
   color: #66fdff;
 }
+.name-logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.logo {
+  height: 45px;
+  padding-left: 20px;
+  /* -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear; */
+}
+
+.logo:hover {
+  padding-right: 20px;
+  -ms-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}

@@ -1,5 +1,7 @@
 .get-material {
   display: flex;
+  font-family: 'Oxygen Mono',
+  monospace;
   flex-direction: column;
   justify-content: space-around;
   background-color: white;
@@ -11,6 +13,8 @@
 }
 
 .btn-bar button {
+  font-family: 'Oxygen Mono',
+  monospace;
   border-color: #FFF;
   border-style: solid;
   border-radius: 5px;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import logo from "../devWitLogo2.png";
 
 function NavBar() {
   return (
@@ -14,7 +15,10 @@ function NavBar() {
       <Link to="/my-set">
         <button className="nav-button">My Set</button>
       </Link>
-      <h1>DevWit</h1>
+      <div className="name-logo">
+        <h1>DevWit</h1>
+        <img className="logo" src={logo} alt="DevWit logo laughing laptop" />
+      </div>
     </nav>
   );
 }
