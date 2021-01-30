@@ -16,11 +16,12 @@ By: [Lola Dolinsky](https://github.com/lo-la-do-li)
 
 ## Project Overview
 
-This app was created with a specific audience in mind: Software Developers with a sense of humor that might consider moonlighting as a comedian! With this app, a user is greeted with a welcome message and description on the home page. The user can then navigate to a 'Get Some New Material' page where there are two options: One button generates one random programming joke; Another generates ten random programming jokes. The user can then choose to add a joke to their set. On clicking the 'My Set' tab, the user will see the jokes that they liked displayed. If the joke bombs, or maybe it seems less funny now... the user can remove it from their set.
+This app was created with a specific audience in mind: Software Developers with a sense of humor who might consider a moonlight career in comedy! With this app, a user is greeted with a welcome message and description on the home page. The user can then navigate to a 'Get Some New Material' page where there are two options: One button generates one random programming joke; Another generates ten random programming jokes. The user can then choose to add a joke to their set. On clicking the 'My Set' tab, the user will see the jokes that they liked displayed. If the joke bombs, or maybe it seems less funny now... the user can remove it from their set.
 
+#### Visit DevWit deployed site [here](https://dev-wit.herokuapp.com/home)
 ## DevWit in Action:
 
-![DevWit-gif](https://media.giphy.com/media/LR7SOnCgQQ5seUjpJ0/giphy.gif)
+![DevWit-gif](https://media.giphy.com/media/FLbJz9Mgm7QTzxQrzZ/giphy.gif)
 
 ## Goals
 
@@ -38,16 +39,16 @@ Ability for users to store/manipulate the data displayed in the application, suc
 
 ## Technologies And Tools
 
-> - React (With hooks)
-
+> - React (w/ hooks)
 > - React Testing (with Jest)
-> - use-global-hook
+> - Global state management w/ `use-global-hook`
 > - React Router
-> - JavaScript
+> - JavaScript ES6
 > - JSX
-> - git
-> - GitHub
-> - Terminal
+> - Circle CI
+> - git version control
+> - GitHub Project Board 
+> - Heroku
 
 <details>
   <summary>Setup</summary>
@@ -68,7 +69,7 @@ Ability for users to store/manipulate the data displayed in the application, suc
 ## Challenges
 
 - Learning and implementing use-global-hook for state management of jokes displayed in My Set
-- Producing all app logic, API calls, testing suites, and styling in short window (6 days)
+- Producing all app logic, API calls, testing suites, and styling in less than a week 
 
 ## Wins
 
