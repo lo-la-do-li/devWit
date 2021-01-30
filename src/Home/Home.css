@@ -10,6 +10,8 @@
   margin: 6vh;
 }
 .welcome-msg {
+  font-family: 'Oxygen Mono',
+  monospace;
   justify-content: center;
   align-items: center;
   font-size: xx-large;
@@ -19,6 +21,7 @@
 .app-description {
   display: flex;
   flex-direction: column;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding-bottom: 50px; 
 }
