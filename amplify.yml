@@ -4,9 +4,9 @@ frontend:
     # IMPORTANT - Please verify your build commands
     build:
       commands:
-        - react-scripts build
+        - npm run build
   artifacts:
-    baseDirectory: /
+    baseDirectory: build
     files:
       - '**/*'
   cache:
